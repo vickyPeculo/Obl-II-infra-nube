@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Certeza · Compañía de Seguros</title>
+  <style>
+    :root{--bg:linear-gradient(135deg,#f8fafc 0%,#eef2ff 100%);--card:#ffffff;--accent:#0ea5e9;--text:#0f172a;--muted:#475569}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--text);background:var(--bg);min-height:100vh;display:grid;place-items:center}
+    .wrap{width:min(980px,92%);padding:32px 0}
+    .nav{display:flex;align-items:center;justify-content:space-between;margin-bottom:28px}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:20px;letter-spacing:.2px}
+    .logo{width:32px;height:32px;border-radius:10px;background:conic-gradient(from 45deg at 50% 50%,#0ea5e9,#22d3ee,#0ea5e9);box-shadow:0 6px 24px rgba(14,165,233,.35)}
+    .card{background:var(--card);border:1px solid rgba(2,6,23,.06);border-radius:18px;box-shadow:0 20px 60px rgba(2,6,23,.06);padding:36px}
+    .hero{display:grid;gap:14px;margin-bottom:8px}
+    h1{margin:0;font-size:34px;line-height:1.1;letter-spacing:-.2px}
+    p.lead{margin:0;color:var(--muted);font-size:16px}
+    .grid{display:grid;gap:16px;margin-top:22px}
+    @media(min-width:720px){.grid{grid-template-columns:1.4fr .6fr;align-items:start}}
+    .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+    .btn{appearance:none;border:none;border-radius:12px;padding:12px 16px;font-weight:600;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:8px}
+    .btn.primary{background:var(--accent);color:white;box-shadow:0 10px 30px rgba(14,165,233,.35)}
+    .btn.ghost{background:transparent;color:var(--accent);border:1px solid rgba(14,165,233,.35)}
+    .panel{background:linear-gradient(180deg,rgba(14,165,233,.06),transparent);border:1px dashed rgba(14,165,233,.35);border-radius:14px;padding:18px}
+    .kvs{display:grid;gap:10px;margin-top:10px}
+    .kv{display:flex;align-items:center;gap:10px}
+    .dot{width:10px;height:10px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 3px rgba(14,165,233,.15)}
+    .footer{margin-top:18px;color:#64748b;font-size:13px;text-align:center}
+    a{color:inherit}
+    .contact{display:flex;gap:16px;flex-wrap:wrap;margin-top:8px}
+    .chip{background:#f1f5f9;border:1px solid #e2e8f0;padding:8px 10px;border-radius:999px;font-size:14px}
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <div class="nav">
+      <div class="brand"><span class="logo"></span>Certeza · Compañía de Seguros</div>
+    </div>
+    <section class="card">
+      <div class="hero">
+        <h1>Protegemos lo que te importa, con <span style="color:#0ea5e9">certeza</span>.</h1>
+        <p class="lead">Certeza Compañía de Seguros · Teléfono <strong>0800 3093</strong> o al mail <strong><a href="mailto:certeza@seguros.com.ar">certeza@seguros.com.ar</a></strong>.</p>
+        <div class="cta">
+          <a class="btn primary" href="tel:08003093">Llamar al 0800 3093</a>
+          <a class="btn ghost" href="mailto:certeza@seguros.com.ar?subject=Consulta%20de%20seguros">Escribir por mail</a>
+        </div>
+      </div>
+      <div class="grid">
+        <div class="panel">
+          <div class="kvs">
+            <div class="kv"><span class="dot"></span><div><strong>Atención simple</strong><br/><span style="color:#64748b">Hablá con una persona, sin vueltas.</span></div></div>
+            <div class="kv"><span class="dot"></span><div><strong>Cobertura clara</strong><br/><span style="color:#64748b">Condiciones entendibles y sin letra chica.</span></div></div>
+            <div class="kv"><span class="dot"></span><div><strong>Respuestas rápidas</strong><br/><span style="color:#64748b">Estamos cuando nos necesitás.</span></div></div>
+          </div>
+        </div>
+        <div class="panel">
+          <div><strong>Contacto directo</strong></div>
+          <div class="contact">
+            <span class="chip">📞 0800 3093</span>
+            <span class="chip">✉️ <a href="mailto:certeza@seguros.com.ar">certeza@seguros.com.ar</a></span>
+          </div>
+          <div style="margin-top:12px;color:#64748b;font-size:14px">Sitio estático servido desde S3 detrás de CloudFront.</div>
+        </div>
+      </div>
+      <div class="footer">© <span id="y"></span> Certeza Compañía de Seguros</div>
+    </section>
+  </main>
+  <script>document.getElementById("y").textContent=new Date().getFullYear()</script>
+</body>
+</html>
